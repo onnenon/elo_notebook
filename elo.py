@@ -225,7 +225,8 @@ def calc_elo(place_s, down_s, kill_s, assist_s, accuracy_s, loss_mult, time_mult
     if won:
         score = (((kill_s + assist_s) * accuracy_s) * time_mult) + (
             death_penalty + down_s + stayed_bonus + VICTORY_BONUS + place_s)
-        score_with_bonus = 0
+        score_with_bonus = (((kill_s + assist_s) * accuracy_s) * time_mult) + (
+            death_penalty + down_s + stayed_bonus + place_s) + (VICTORY_BONUS * scaling_bonus)
     else:
         score = (((kill_s + assist_s) * accuracy_s) * time_mult) + place_s + (loss_mult * (down_s + DEATH_PENALTY))
         score_with_bonus = score
