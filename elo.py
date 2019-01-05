@@ -92,7 +92,7 @@ def calc_kill_score(kills):
         kills: Number of kills.
 
     Globals:
-        KILLS_MULT: GLobal kills multiplier value.
+        KILLS_MULT: Global kills multiplier value.
         KILLS_MOD: Global kills modifier value.
 
     Returns:
